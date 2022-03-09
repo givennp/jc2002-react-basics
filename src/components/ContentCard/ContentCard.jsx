@@ -11,14 +11,13 @@ import { FaRegThumbsUp } from "react-icons/fa";
 import newyork from "./newyork.jpeg";
 
 const ContentCard = (props) => {
-
-  // const likePost = (amount) => {
-  //   numberOfLikes += 1;
-  //   alert(`Liked post ${props.numberOfLikes}`);
-  // };
+  const likePost = (amount) => {
+    props.numberOfLikes += 1;
+    alert(`Liked post ${props.numberOfLikes}`);
+  };
 
   return (
-    <Card>
+    <Card className="my-2">
       <CardBody>
         <CardTitle tag="h5" className="fw-bold">
           {props.username}
@@ -41,11 +40,13 @@ const ContentCard = (props) => {
         </CardText>
         <CardText>
           <span className="fw-bold">{props.username}</span>{" "}
-          {props.caption.length > 140 ? props.caption.slice(0, 140) + "..." : props.caption}
+          {props.caption.length > 140
+            ? props.caption.slice(0, 140) + "..."
+            : props.caption}
         </CardText>
 
         <Button
-          // onClick={() => likePost(14)}
+          onClick={() => likePost(14)}
           color="danger"
           className="d-flex justify-content-center align-items-center"
         >

@@ -1,31 +1,45 @@
 import { useState } from "react";
-import { Card, CardBody, CardTitle, CardText, Button, Input } from "reactstrap";
+import { Card, CardBody, CardTitle, CardText, Button } from "reactstrap";
 import moment from "moment";
-import { FaProductHunt } from "react-icons/fa";
 
 const TodoItem = (props) => {
+  // const renderButton = () => {
+  //   if (props.status === "done") {
+  //     return <Button color="success">Done</Button>;
+  //   }
+
+  //   return <Button color="danger">On Going</Button>;
+  // };
+
   return (
     <Card className="my-2">
       <CardBody>
         <div className="d-flex justify-content-between">
           <div>
             <CardTitle tag="h5" className="fw-bold">
-              {moment(props.date).format("DD MMM YYYY")}
+              {moment(props.date).format("DD MMMM YYYY")}
             </CardTitle>
             <CardText>{props.action}</CardText>
           </div>
-          <div>
-            {props.status ? (
-              <Button onClick={props.editItem} color="success">
-                {" "}
-                Done{" "}
+          <div className="d-flex align-items-center">
+            {props.isDone ? (
+              <Button
+                className="mx-2"
+                onClick={props.toggleStatus}
+                color="success"
+              >
+                Done
               </Button>
             ) : (
-              <Button onClick={props.editItem} color="danger">
+              <Button
+                className="mx-2"
+                onClick={props.toggleStatus}
+                color="warning"
+              >
                 On Going
               </Button>
             )}
-            <Button className="ms-2" onClick={props.deleteItem}>
+            <Button onClick={props.deleteItem} className="mx-2" color="danger">
               Delete
             </Button>
           </div>
