@@ -5,7 +5,6 @@ import ContentCard from "../components/ContentCard/ContentCard";
 import TodoItem from "../components/TodoItem/TodoItem";
 import { Button, Input } from "reactstrap";
 import axios from "axios";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const data = [
   {

@@ -10,6 +10,7 @@ import {
 import { useEffect, useState } from "react";
 import { axiosInstance } from "../configs/api";
 import { useSearchParams } from "react-router-dom";
+import { jobs } from "../fake-api/jobs";
 
 const ProductCard = ({ productName, price, category }) => {
   return (
@@ -104,6 +105,8 @@ const ProductPage = () => {
     setSearchParams({ page: newPage, search: searchValue });
     setCurrentPage(newPage);
   };
+
+  
 
   useEffect(() => {
     let product_name = searchParams.get("search");

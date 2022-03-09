@@ -9,6 +9,7 @@ import HomePage from "./pages/home";
 import NotFoundPage from "./pages/404";
 import HalamanBandMember from "./pages/band-member";
 import ProductPage from "./pages/products";
+import EmployeePage from "./pages/employee";
 
 function App() {
   return (
@@ -19,8 +20,12 @@ function App() {
         <Route path="/band" element={<BandPage />} />
         <Route path="/todo" element={<TodoPage />} />
         <Route path="/tour" element={<TourPage />} />
-        <Route path="/band-member/:bandMemberId" element={<HalamanBandMember />} />
+        <Route
+          path="/band-member/:bandMemberId"
+          element={<HalamanBandMember />}
+        />
         <Route path="/products" element={<ProductPage />} />
+        <Route path="/employee" element={<EmployeePage/>} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>

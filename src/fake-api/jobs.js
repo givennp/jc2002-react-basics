@@ -1,4 +1,4 @@
-const jobs = [
+ export const jobs = [
   'Metrics', 'Marketing', 'Markets',
   'Infrastructure', 'Security', 'Applications',
   'Interactions', 'Mobility', 'Division',
