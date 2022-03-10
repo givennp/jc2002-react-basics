@@ -10,6 +10,7 @@ import NotFoundPage from "./pages/404";
 import HalamanBandMember from "./pages/band-member";
 import ProductPage from "./pages/products";
 import EmployeePage from "./pages/employee";
+import CounterPage from "./pages/counter";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         />
         <Route path="/products" element={<ProductPage />} />
         <Route path="/employee" element={<EmployeePage/>} />
+        <Route path="/counter" element={<CounterPage/>} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
